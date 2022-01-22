@@ -7,7 +7,8 @@
     <h2 class="font-bold text-blue-500 text-2xl">Hello {{ user.name }}</h2>
 
     <form @submit.prevent="addItemToCart" data-testid="add-items">
-      <input class="input[type='text']"  type="text" v-model="itemName" />
+      <div id="temperature" class="text-blue-700">Temperature:</div>
+      <input class=""  type="text" v-model="itemName" aria-labelledby="temperature" placeholder="add task"/>
       <button class="btn">Add</button>
     </form>
 
