@@ -12,3 +12,13 @@
 - [x] Pinia
 - [ ] Vitest
 - [ ] Cypress
+
+## Screenshot
+
+`yarn dev`
+
+<img src="screens/Screenshot_2022-01-22_164706.png" width="100%">
+
+
+`yarn build && yarn start`
+<img src="screens/Screenshot_2022-01-22_165047.png" width="100%">
