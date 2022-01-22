@@ -30,6 +30,8 @@
         Clear the cart
       </button>
     </form>
+    <div class="i-mdi-alarm text-orange-400" />
+    <button class="i-carbon-sun dark:i-carbon-moon" />
   </div>
 </template>
 
