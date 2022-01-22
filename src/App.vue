@@ -1,34 +1,33 @@
 <template>
-  <div>
-    <div style="margin: 1rem 0;">
+  <div class="container mx-auto px-4">
+    <div style="margin: 1rem 0">
       <Logo />
     </div>
 
-    <h2>Hello {{ user.name }}</h2>
+    <h2 class="font-bold text-blue-500 text-2xl">Hello {{ user.name }}</h2>
 
     <form @submit.prevent="addItemToCart" data-testid="add-items">
-      <input type="text" v-model="itemName" />
-      <button>Add</button>
+      <input class="input[type='text']"  type="text" v-model="itemName" />
+      <button class="btn">Add</button>
     </form>
 
     <form @submit.prevent="buy">
-      <ul data-testid="items">
-        <li v-for="item in cart.items" :key="item.name">
+      <ul class="pl-4" data-testid="items">
+        <li class="ml-4 font-bold list-decimal" v-for="item in cart.items" :key="item.name">
           {{ item.name }} ({{ item.amount }})
-          <button
-            @click="cart.removeItem(item.name)"
-            type="button"
-          >X</button>
+          <button @click="cart.removeItem(item.name)" type="button" class="btn !bg-red-500 !text-white !py-2.1 !m-0 !rounded-full ">X</button>
         </li>
       </ul>
-
-      <button :disabled="!user.name">Buy</button>
-      <button
+ <hr class="border-gray-600 mt-5">
+      <button class="btn" :disabled="!user.name">Buy</button>
+      <button class="btn"
         :disabled="!cart.items.length"
         @click="clearCart"
         type="button"
         data-testid="clear"
-      >Clear the cart</button>
+      >
+        Clear the cart
+      </button>
     </form>
   </div>
 </template>
@@ -72,12 +71,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
-img {
-  width: 200px;
+@screen lg {
+  .bar {
+    background: orange;
+  }
 }
-button,
-input {
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+.bar {
+  @apply bg-pink-500;
 }
 </style>

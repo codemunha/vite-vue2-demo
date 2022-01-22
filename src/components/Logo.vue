@@ -210,13 +210,13 @@ export default defineComponent({
         function blinkHandler() {
           blinkState++
           if (blinkState % 2) {
-            blinking.value = 'closed'
+            // blinking.value = 'closed'
             setTimeout(blinkHandler, blinkTimer * 1.7)
           } else if (blinkState < 4) {
-            blinking.value = 'open'
+            // blinking.value = 'open'
             setTimeout(blinkHandler, blinkTimer)
           } else {
-            blinking.value = 'open'
+            // blinking.value = 'open'
           }
         }
         setTimeout(blinkHandler, 0)
@@ -229,13 +229,13 @@ export default defineComponent({
         function blinkHandler() {
           blinkState++
           if (blinkState % 2) {
-            talking.value = 'closed'
-            // setTimeout(blinkHandler, talkRate)
+            // talking.value = 'closed'
+            setTimeout(blinkHandler, talkRate)
           } else if (blinkState < 10) {
             // talking.value = 'open'
             setTimeout(blinkHandler, talkRate)
           } else {
-            talking.value = 'closed'
+            // talking.value = 'closed'
           }
         }
         setTimeout(blinkHandler, 0)
