@@ -220,7 +220,7 @@ export default defineComponent({
           }
         }
         setTimeout(blinkHandler, 0)
-      }, 10000)
+      }, 200)
       onUnmounted(() => {
         clearInterval(timerId)
       })
@@ -229,17 +229,17 @@ export default defineComponent({
         function blinkHandler() {
           blinkState++
           if (blinkState % 2) {
-            // talking.value = 'closed'
-            setTimeout(blinkHandler, talkRate)
+            talking.value = 'closed'
+            // setTimeout(blinkHandler, talkRate)
           } else if (blinkState < 10) {
             // talking.value = 'open'
             setTimeout(blinkHandler, talkRate)
           } else {
-            // talking.value = 'closed'
+            talking.value = 'closed'
           }
         }
         setTimeout(blinkHandler, 0)
-      }, 5000)
+      }, 500)
       onUnmounted(() => {
         clearInterval(talkingTimer)
       })
