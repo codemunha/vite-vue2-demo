@@ -14,8 +14,8 @@ export default defineConfig({
     ViteComponents({ transformer: 'vue2' }),
     Unocss({
       presets: [
-        presetAttributify({}),
-        presetUno(),
+        // presetAttributify({}),
+        // presetUno(),
         presetIcons(),
         presetMini(),
         presetWind(),
